@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('./fonts/ubuntu.ttf');
+}
+body{
+    margin: 0;
+    height: 100%;
+}
+
+#jadval {
+    width: 500px;
+    position: fixed;
+    /*height: 100%;*/
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.257);
+    z-index: 2;
+    text-align: center;
+    height: 100%;
+}
+.names {
+    margin: 0;
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-size: 35px;
+}
+.pos {
+    margin: 0;
+    font-style: italic;
+    font-family: 'Ubuntu';
+    font-size: 30px;
+    margin-right: 40px;
+    width: 40px;
+    text-align: center;
+    color: rgb(61, 61, 61);
+    
+}
+.jadvalBlock {
+    max-height: 120px;
+    /*text-align: center;*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    padding: 100px;
+    /*justify-content: center;
+    align-items: center;*/
+}
+#laps {
+    margin: 0;
+    z-index: 3;
+    position: fixed;
+    left: 94%;
+    padding: 10px;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: 35px;
+}
+.pic {
+    width: 60px;
+    max-height: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    object-fit: contain;
+}
+.jadvalBackground {
+    width: 400px;
+    position: fixed;
+    /*height: 100%;*/
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.257); */
+    /* filter: blur(10px); */
+    z-index: 1;
+    position: absolute;
+    transition: top 400ms;
+    display: flex;
+}
+.kmh {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    transition: 3s;
+}
+.kmh2 {
+    font-family: 'Ubuntu';
+    /*/bottom: -100px;*/
+    position: static;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid black;
+    z-index: 1;
+}
+.kmh2 #teamLogo {
+    padding: 20px;
+    max-height: 50px;
+    max-width: 50px;
+}
+.kmh2 p {
+    padding: 20px;
+    font-size: 32px;
+}
+.kmh2 #driverpic {
+    width: 400px;
+    height: 400px;
+}
+@keyframes pop-st {
+    0% {
+        bottom: -1000px;
+        display: none;
+    }
+   100% {
+        bottom: 200px;
+        display: flex;
+    }
+}
+@keyframes pop-en {
+    0% {
+        bottom: 200px;
+        display: flex;
+    }
+   100% {
+        bottom: -1000px;
+        display: flex;
+    }
+}
+
+.animStart {
+    position: fixed;
+    bottom: 200px;
+    transition: 1s;
+    animation-name: pop-st;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+.animEnd {
+    position: fixed;
+    bottom: -1000px;
+    transition: 1s;
+    animation-name: pop-en;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
