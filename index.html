@@ -4,20 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>F1 - 20XX Simulator</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/others.css">
+    <link rel="shortcut icon" href="./src/f1.png" type="image/x-icon">
+        
+    <meta name="og:image" content="./src/f1.png" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="F1 2024 Simulator">
+    <meta property="og:description" content="A simple F1 2024 Simulator">
+    <meta property="og:image" content="./src/f1.png">
+    <meta name="description" content="A simple F1 2024 Simulator">
+    <meta name="keywords"
+        content="f1, f1 simulator, f1 simulation">
+    <meta name="author" content="MohsenEMX, A_KHT">
+    <title>F1 - 2024 Simulator</title>
 </head>
 <body>
-    <div id="jadval">
+    <div id="jadval"></div>
+    <p id="laps">1/50</p>
+    <p id="trackName">Monza Circuit, Italy</p>
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-body">
+      <p id="modelHeader">F1 2024 Simulator</p>
+      <p class="modalBody">Press "S" to start the simulation.</p>
+      <p class="modalBody">It is recommended to set the zoom level to 60% - 70% for best experience</p>
+      <hr>
+      <h3>Recent Changes: </h3>
+        <p class="modalBody"> - Added Modal</p>
+      <hr>
+      <p class="modalBody">Version 0.1 Beta</p>
+      <p class="modalBody">Made by @MohsenEMX & @A_KHT</p>
     </div>
-    <p id="laps">0/50
-    </p>
+  </div>
+
+</div>
+
+  
+  </div>
     <div class="kmh" id="kmh">
         <div class="kmh2"></div>
         
     </div>
     <canvas></canvas>
-    <script src="script.js"></script>
+    <script src="./src/others.js"></script>
+    <script src="./src/script.js"></script>
 </body>
 
 </html> 
